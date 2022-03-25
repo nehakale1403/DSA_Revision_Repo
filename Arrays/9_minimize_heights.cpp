@@ -14,8 +14,9 @@ int minimizeMaxDiff(int *arr, int n, int k){
         maximum = max(largest, arr[i]+k);
         
         if(minimum > 0)
-            ans = min(ans, minimum, maximum);
+            ans = min(ans, maximum-minimum);
     }
+    return ans;
 }
 
 int main(){
